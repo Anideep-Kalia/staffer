@@ -24,7 +24,7 @@ const Home = () => {
           App you were waiting for.
         </h1>
         <p className="text-center cursor-default leading-8 text-xl z-30 font-light text-gray-700 mt-10">
-          EasyStaff is a free staff attendance and payroll management app that
+          Staffer is a free staff attendance and payroll management app that
           enables employers <br /> to easily manage their staff with automatic
           salary calculation, salary payment and more.
         </p>

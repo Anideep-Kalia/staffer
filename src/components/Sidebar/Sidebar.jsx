@@ -11,7 +11,7 @@ const Sidebar = () => {
     <div className="h-screen absolute left-0 top-0 w-56 bg-quadtiary-700 flex justify-start flex-col">
       <div id="top" className="bg-quadtiary-800 py-3 mb-10 text-center">
         <h2 className="text-white font-sans font-extrabold underline text-2xl cursor-default">
-          EasyStaff
+          Staffer
         </h2>
       </div>
       <div id="mid" className="flex flex-col items-center justify-center">

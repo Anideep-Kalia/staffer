@@ -53,7 +53,7 @@ const Login = () => {
           className="float absolute right-20 -bottom-44 h-14"
         />
         <h1 className="text-center mb-4 font-semibold text-3xl">
-          Welcome to EasyStaff 👋
+          Welcome to Staffer 👋
         </h1>
         <input
           type="email"

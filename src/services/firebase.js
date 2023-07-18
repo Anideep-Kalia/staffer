@@ -4,12 +4,13 @@ require('firebase/auth')
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: process.env.REACT_APP_API_KEY,
-  authDomain: process.env.REACT_APP_AUTH_DOMAIN,
-  projectId: process.env.REACT_APP_PROJECT_ID,
-  storageBucket: process.env.REACT_APP_STORAGE_BUCKET,
-  messagingSenderId: process.env.REACT_APP_MESSAGING_SENDER_ID,
-  appId: process.env.REACT_APP_APP_ID
+  apiKey: "AIzaSyDYUBNSLw1GqKhk66ZEGYEyrNdUiBn3mXs",
+  authDomain: "staffer-9fd4a.firebaseapp.com",
+  projectId: "staffer-9fd4a",
+  storageBucket: "staffer-9fd4a.appspot.com",
+  messagingSenderId: "921004441598",
+  appId: "1:921004441598:web:166fc1a1c99a317e438aaf",
+  measurementId: "G-FY50VFRJMM"
 };
 
 
