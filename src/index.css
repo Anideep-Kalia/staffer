@@ -1,13 +1,277 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("http://fonts.cdnfonts.com/css/sofia-pro");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800;900&display=swap');
+
+::-moz-selection {
+  /* Code for Firefox */
+  color: white;
+  background: #4c00ff;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+::selection {
+  color: white;
+  background: #4c00ff;
+}
+
+#cta-btn {
+  font-family: "Sofia Pro", sans-serif;
+}
+
+#hero-heading{
+  font-family: 'Inter', sans-serif;
+}
+
+/* Hour */
+input[type="time"]::-webkit-datetime-edit-hour-field {
+  background-color: #f2f4f5;
+  border-radius: 15%;
+  padding: 19px 13px;
+}
+
+/* Minute */
+input[type="time"]::-webkit-datetime-edit-minute-field {
+  background-color: #f2f4f5;
+  border-radius: 15%;
+  padding: 19px 13px;
+}
+
+/* AM/PM */
+input[type="time"]::-webkit-datetime-edit-ampm-field {
+  display: none;
+}
+
+/* Up/Down arrows for incrementing/decrementing the value */
+input[type="time"]::-webkit-inner-spin-button {
+  display: block;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+#blurry-gradient {
+  position: fixed;
+  top: -20%;
+  left: -20%;
+  width: 800px;
+  height: 800px;
+  border-radius: 50% 22% 40% 80%;
+  filter: blur(100px);
+  background: radial-gradient(
+    circle at 50% 50%,
+    rgba(76, 0, 255, 1),
+    rgba(76, 0, 255, 0)
+  );
+  opacity: 0.4;
+}
+
+#blurry-gradient-2 {
+  position: fixed;
+  bottom: -20%;
+  right: -20%;
+  width: 800px;
+  height: 800px;
+  border-radius: 50% 22% 40% 80%;
+  filter: blur(100px);
+  background: radial-gradient(
+    circle at 50% 50%,
+    rgba(76, 0, 255, 1),
+    rgba(76, 0, 255, 0)
+  );
+  opacity: 0.4;
+}
+
+.sk-chase {
+  width: 50px;
+  height: 50px;
+  position: relative;
+  animation: sk-chase 2.5s infinite linear both;
+}
+
+.sk-chase-dot {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  animation: sk-chase-dot 2s infinite ease-in-out both;
+}
+
+.sk-chase-dot:before {
+  content: "";
+  display: block;
+  width: 25%;
+  height: 25%;
+  background-color: #4c00ff;
+  border-radius: 100%;
+  animation: sk-chase-dot-before 2s infinite ease-in-out both;
+}
+
+.sk-chase-dot:nth-child(1) {
+  animation-delay: -1.1s;
+}
+.sk-chase-dot:nth-child(2) {
+  animation-delay: -1s;
+}
+.sk-chase-dot:nth-child(3) {
+  animation-delay: -0.9s;
+}
+.sk-chase-dot:nth-child(4) {
+  animation-delay: -0.8s;
+}
+.sk-chase-dot:nth-child(5) {
+  animation-delay: -0.7s;
+}
+.sk-chase-dot:nth-child(6) {
+  animation-delay: -0.6s;
+}
+.sk-chase-dot:nth-child(1):before {
+  animation-delay: -1.1s;
+}
+.sk-chase-dot:nth-child(2):before {
+  animation-delay: -1s;
+}
+.sk-chase-dot:nth-child(3):before {
+  animation-delay: -0.9s;
+}
+.sk-chase-dot:nth-child(4):before {
+  animation-delay: -0.8s;
+}
+.sk-chase-dot:nth-child(5):before {
+  animation-delay: -0.7s;
+}
+.sk-chase-dot:nth-child(6):before {
+  animation-delay: -0.6s;
+}
+
+@keyframes sk-chase {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes sk-chase-dot {
+  80%,
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes sk-chase-dot-before {
+  50% {
+    transform: scale(0.4);
+  }
+  100%,
+  0% {
+    transform: scale(1);
+  }
+}
+
+.slide-top {
+  -webkit-animation: slide-top 1.5s infinite alternate both;
+  animation: slide-top 1.5s infinite alternate both;
+}
+
+@media (max-height: 728px) {
+  .slide-top {
+    position: absolute;
+    left: 47%;
+    bottom: 1rem;
+  }
+}
+
+@-webkit-keyframes slide-top {
+  0% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(-20px);
+    transform: translateY(-20px);
+  }
+}
+@keyframes slide-top {
+  0% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(-20px);
+    transform: translateY(-20px);
+  }
+}
+
+.float {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translatey(0px);
+  }
+  50% {
+    transform: translatey(-10px);
+  }
+  100% {
+    transform: translatey(0px);
+  }
+}
+
+.css-1d3z3hw-MuiOutlinedInput-notchedOutline {
+  border-radius: 0 !important;
+}
+
+.css-1sumxir-MuiFormLabel-root-MuiInputLabel-root.Mui-focused {
+  color: #4c00ff !important;
+}
+
+.css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root.Mui-focused
+  .MuiOutlinedInput-notchedOutline {
+  border-color: #4c00ff !important;
+}
+
+.css-1g24dm6-MuiInputBase-input-MuiOutlinedInput-input {
+  padding: 13.5px !important;
+}
+
+
+
+.animation:before, .animation:after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 8px;
+  top: 50%;
+  margin-top: -0.5px;
+  background: #4400e6;
+}
+
+.animation:before {
+  left: -2.5px;
+}
+.animation:after {
+  right: 2.5px;
+  background: #4400e6;
+  transition: width 0.8s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+.animation:hover:before {
+  background: #4400e6;
+  width: 100%;
+  transition: width 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+.animation:hover:after {
+  background: transparent;
+  width: 100%;
+  transition: 0s;
 }
