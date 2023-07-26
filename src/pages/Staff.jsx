@@ -34,15 +34,6 @@ const Staff = () => {
   const { currentUser } = useContext(AuthContext);
 
   useEffect(() => {
-    async function getStaff() {
-      await fetchStaffs(business.businessId);
-    }
-    if (business) {
-      getStaff();
-    }
-  }, []);
-
-  useEffect(() => {
     async function getBusiness() {
       await fetchBusiness(currentUser.uid);
     }
@@ -50,6 +41,15 @@ const Staff = () => {
   }, []);
 
   if (business == null) history.push("/add-business");
+
+  useEffect(() => {
+    async function getStaff() {
+      await fetchStaffs(business.businessId);
+    }
+    if (business) {
+      getStaff();
+    }
+  }, []);
 
   const openAddStaffModal = () => {
     setAddStaffModal(true);

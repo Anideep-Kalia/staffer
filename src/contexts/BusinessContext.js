@@ -15,6 +15,7 @@ export const BusinessProvider = ({ children }) => {
 
   const fetchBusiness = async (userId) => {
     setIsFetching(true);
+    console.log("fetchBusiness working");
     let exists = true;
     try {
       const snapshot = await db
