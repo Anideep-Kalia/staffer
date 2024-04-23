@@ -1,70 +1,109 @@
-# Getting Started with Create React App
+# Fern Staff Management System
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is a CRUD (Create, Read, Update, Delete) application built using the FERN stack (Firebase, Express.js, React.js, Node.js). It allows the owner to manage staff details including their salaries.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- User authentication using Firebase Authentication
+- CRUD operations for managing staff details
+- Secure data storage using Firebase Firestore
+- Responsive UI for easy access on multiple devices
 
-### `npm start`
+## Tech Stack
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Frontend**: React.js
+- **Backend**: Node.js, Express.js
+- **Database**: Firebase Firestore
+- **Authentication**: Firebase Authentication
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Prerequisites
 
-### `npm test`
+Before you begin, ensure you have met the following requirements:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- You have installed Node.js and npm
+- You have created a Firebase project and set up Firestore and Authentication
+- You have created a `.env` file in the server directory with the following variables:
+  ```
+  FIREBASE_API_KEY=your_api_key
+  FIREBASE_AUTH_DOMAIN=your_auth_domain
+  FIREBASE_DATABASE_URL=your_database_url
+  FIREBASE_PROJECT_ID=your_project_id
+  FIREBASE_STORAGE_BUCKET=your_storage_bucket
+  FIREBASE_MESSAGING_SENDER_ID=your_messaging_sender_id
+  FIREBASE_APP_ID=your_app_id
+  ```
 
-### `npm run build`
+## Installation
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. Clone the repository:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+   ```bash
+   git clone https://github.com/your_username/fern-staff-management.git
+   ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+2. Navigate to the project directory:
 
-### `npm run eject`
+   ```bash
+   cd fern-staff-management
+   ```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+3. Install dependencies for both client and server:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+   ```bash
+   cd client
+   npm install
+   cd ../server
+   npm install
+   ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+4. Start the server:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+   ```bash
+   npm start
+   ```
 
-## Learn More
+5. Start the client:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+   ```bash
+   cd ../client
+   npm start
+   ```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+6. Open your browser and navigate to `http://localhost:3000` to view the application.
 
-### Code Splitting
+## Deploying to Firebase
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+To deploy the application to Firebase, follow these steps:
 
-### Analyzing the Bundle Size
+1. Build the React app:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+   ```bash
+   cd client
+   npm run build
+   ```
 
-### Making a Progressive Web App
+2. Deploy to Firebase:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+   ```bash
+   firebase deploy
+   ```
 
-### Advanced Configuration
+## Contributing
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Contributions are what make the open-source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
-### Deployment
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## License
 
-### `npm run build` fails to minify
+Distributed under the MIT License. See `LICENSE` for more information.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Contact
+
+Your Name - [@your_twitter](https://twitter.com/your_twitter) - email@example.com
+
+Project Link: [https://github.com/your_username/fern-staff-management](https://github.com/your_username/fern-staff-management)
